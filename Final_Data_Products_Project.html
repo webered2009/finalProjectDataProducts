@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Examining Fortune 500 Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Examining Fortune 500 Data">
+  <meta name="author" content="Eric Weber">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Examining Fortune 500 Data</h1>
+    <h2>Coursera Data Products Final Project</h2>
+    <p>Eric Weber<br/>University of Minnesota</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This project uses data about revenue and profit for Fortune 500 companies over the last 70 years.</p>
+
+<p>The shiny app is hosted here: </p>
+
+<p><a href="https://ericweber.shinyapps.io/Shiny_Project/"> ShinyApp </a></p>
+
+<p>The files to build the shiny app can be found here: </p>
+
+<p><a href="https://github.com/webered2009/Shiny_Project_Coursera_Weber"> Github </a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Project</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The shiny app allows the user to subset the data by year, rank, and company, displaying the total revenue and profit for those companies in millions that year.</p>
+
+<p>This allows the user to see which years a company was present in the dataset, which companies were present in a given year, and which companies were a particular rank in a particular year.</p>
+
+<p>While the table could certainly be extended to do more, I focused on usability in this project.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Overview of the Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>## Error in assign(mname, def, where): cannot add bindings to a locked environment
+</code></pre>
+
+<pre><code>## Error in setMethod(&quot;coerce&quot;, c(from, to), method, where = where): the environment &#39;slidify&#39; is locked; cannot assign methods for function &#39;coerce&#39;
+</code></pre>
+
+<pre><code>## Error in methods::as(data[[i]], colClasses[i]): no method or default for coercing &quot;character&quot; to &quot;remove_comma&quot;
+</code></pre>
+
+<p>Below is the first five lines of the dataset</p>
+
+<pre><code class="r">head(f500, n = 5)
+</code></pre>
+
+<pre><code>## Error in head(f500, n = 5): object &#39;f500&#39; not found
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Summary of Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">summary(f500)
+</code></pre>
+
+<pre><code>## Error in summary(f500): object &#39;f500&#39; not found
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Project'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Overview of the Dataset'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary of Dataset'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

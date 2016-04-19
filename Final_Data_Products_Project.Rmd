@@ -1,0 +1,70 @@
+---
+title       : Examining Fortune 500 Data
+subtitle    : Coursera Data Products Final Project
+author      : Eric Weber
+job         : University of Minnesota
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Introduction
+
+This project uses data about revenue and profit for Fortune 500 companies over the last 70 years.
+
+The shiny app is hosted here: 
+
+[ ShinyApp ](https://ericweber.shinyapps.io/Shiny_Project/)
+
+The files to build the shiny app can be found here: 
+
+[ Github ](https://github.com/webered2009/Shiny_Project_Coursera_Weber)
+
+--- 
+
+## Project 
+
+The shiny app allows the user to subset the data by year, rank, and company, displaying the total revenue and profit for those companies in millions that year.
+
+This allows the user to see which years a company was present in the dataset, which companies were present in a given year, and which companies were a particular rank in a particular year.
+
+While the table could certainly be extended to do more, I focused on usability in this project.
+
+---
+
+## Overview of the Dataset
+
+```{r, results='hide', echo = FALSE}
+
+setClass("remove_comma")
+setAs("character", "remove_comma",
+      function(from) 
+          as.numeric(gsub("[,]", "",from, fixed = FALSE)))
+
+f500 <- read.csv('/Users/ericweber/Dropbox/DataScience/DataScience9DataProducts/Shiny_Project/fortune500.csv'
+                 ,stringsAsFactors = FALSE
+                 ,col.names = c('year', 'rank', 'company','rev','profit')
+                 ,na.strings = c('N.A.')
+                 ,colClasses = c("numeric", "numeric", "character", "remove_comma", "remove_comma"))
+
+```
+
+Below is the first five lines of the dataset
+
+```{r}
+head(f500, n = 5)
+```
+
+---
+
+## Summary of Dataset
+
+```{r}
+summary(f500)
+```
+
+
+
